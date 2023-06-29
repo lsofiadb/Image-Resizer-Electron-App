@@ -1,5 +1,5 @@
 # Image Resizer Electron App :camera:⚛️
-### Desktop app that allows you resize and save images!
+### Desktop app that allows you to resize and save images!
 
 ## Run the app :fire:
 Clone the repository and execute the following commands in your terminal
