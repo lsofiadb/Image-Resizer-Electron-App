@@ -15,6 +15,14 @@ function loadImage(e) {
     return;
   }
 
+  // Get original dimensions of the image
+  const image = new Image();
+  image.src = URL.createObjectURL(file);
+  image.onload = function () {
+    widthInput.value = this.width;
+    heightInput.value = this.height;
+  };
+
   // Show form, image name and output path
   form.style.display = 'block';
   filename.innerText = file.name;
