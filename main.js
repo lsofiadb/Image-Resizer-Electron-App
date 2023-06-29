@@ -30,15 +30,8 @@ app.whenReady().then(() => {
 // Menu template
 const menu = [
     {
-        label: 'File',
-        submenu: [
-            {
-                label: 'Quit',
-                click: () => app.quit(), 
-                accelerator: 'CmdOrCtrl+W' // shortcut to quit the app
-            }
-        ]
-    } 
+        role: 'fileMenu', 
+    }
 ];
 
 app.on("window-all-closed", () => {
