@@ -1,0 +1,28 @@
+{
+  "name": "image-resizer-electron-app",
+  "productName": "Image Resizer",
+  "version": "1.0.0",
+  "description": "Desktop app to resize image dimensions",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsofiadb/Image-Resizer-Electron-App.git"
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Laura Sofia Dueñas Bulla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lsofiadb/Image-Resizer-Electron-App/issues"
+  },
+  "homepage": "https://github.com/lsofiadb/Image-Resizer-Electron-App#readme",
+  "dependencies": {
+    "electron": "^25.2.0",
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
