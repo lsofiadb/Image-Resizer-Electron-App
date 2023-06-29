@@ -20,6 +20,17 @@ function createMainWindow() {
   mainWindow.loadFile(path.join(__dirname, "./renderer/index.html")); //also we can load a website if we want to, in this case we'll load our frontend
 }
 
+function createAboutWindow(){
+    // another window of our app
+  const aboutWindow = new BrowserWindow({
+    // here we are creating an instance
+    title: "About Image Resizer",
+    width: 300,
+    height: 300,
+  });
+
+  aboutWindow.loadFile(path.join(__dirname, "./renderer/about.html")); 
+}
 // call the window when app is ready
 app.whenReady().then(() => {
   createMainWindow();
@@ -34,7 +45,8 @@ const menu = [
         label: app.name,
         submenu: [
             {
-                label: 'About'
+                label: 'About',
+                click: createAboutWindow // don't put parentheses, it will fire off the window automatically
             }
         ]
     }] : []),
@@ -44,7 +56,8 @@ const menu = [
     ...(!isMac ? [{
         label: 'Help',
         submenu: [{
-            label: 'About'
+            label: 'About',
+            click: createAboutWindow
         }]
     }] : [])
 ];
