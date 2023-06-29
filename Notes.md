@@ -10,11 +10,11 @@ index.js -> main.js -> main process, entry point of our app
 npm i electron resize-img toastify-js
 ```
 
-main.js -> backend, dealing with database, business logic
-renderer -> frontend
+- main.js -> backend, dealing with database, business logic
+- renderer -> frontend
 
 ```JSON
-scripts": {
+"scripts": {
     "start": "electron ."
   }
 ```
