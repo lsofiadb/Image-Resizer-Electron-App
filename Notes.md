@@ -39,3 +39,13 @@ To fix that we add a metatag on our html file
 Electron's main process is a Node.js environment that has full operating system access. On top of Electron modules, you can also access Node.js built-ins, as well as any packages installed via npm. On the other hand, renderer processes run web pages and do not run Node.js by default for security reasons.
 
 To bridge Electron's different process types together, we will need to use a special script called a preload.
+
+## Electron js - Packaging and distributing our app
+There are two methods:
+- Distribute unpackaged files
+- Distribute packaged (.asar files) -> more secure -> Tools: electron builder, electron packager 
+
+https://github.com/electron/electron/releases
+
+## Inno Setup
+https://jrsoftware.org/isdl.php
