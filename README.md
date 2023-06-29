@@ -1,6 +1,17 @@
 # Image Resizer Electron App :camera:⚛️
 ### Desktop app that allows you resize and save images!
 
+## Run the app :fire:
+Clone the repository and execute the following commands in your terminal
+
+``` shell
+npm install
+```
+
+``` shell
+npx electronmon .
+```
+
 ## User interface :low_brightness::rocket:
 <img src="https://github.com/lsofiadb/Image-Resizer-Electron-App/blob/main/assets/MainWindow.png"/>
 <img src="https://github.com/lsofiadb/Image-Resizer-Electron-App/blob/main/assets/Form.png"/>
