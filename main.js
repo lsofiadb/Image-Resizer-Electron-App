@@ -1,5 +1,5 @@
 const path = require("path");
-const { app, BrowserWindow } = require("electron"); // Later we will  instantiate a new browser window
+const { app, BrowserWindow, Menu } = require("electron"); // Later we will  instantiate a new browser window
 
 const isDev = process.env.NODE_ENV !== 'development';
 function createMainWindow() {
@@ -19,10 +19,27 @@ function createMainWindow() {
   mainWindow.loadFile(path.join(__dirname, "./renderer/index.html")); //also we can load a website if we want to, in this case we'll load our frontend
 }
 
-// call the window
+// call the window when app is ready
 app.whenReady().then(() => {
   createMainWindow();
+  // Implement Menu
+  const mainMenu = Menu.buildFromTemplate(menu);
+  Menu.setApplicationMenu(mainMenu);
 });
+
+// Menu template
+const menu = [
+    {
+        label: 'File',
+        submenu: [
+            {
+                label: 'Quit',
+                click: () => app.quit(), 
+                accelerator: 'CmdOrCtrl+W' // shortcut to quit the app
+            }
+        ]
+    } 
+];
 
 app.on("window-all-closed", () => {
   // quit the app when windows will be closed
